@@ -1,0 +1,157 @@
+// Basic Reset
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+// Responsive Config
+
+$site-desk-design: 1920;
+$container-desk: 1440;
+$site-tab-design: 768;
+$container-tab: 647;
+$site-mob-design: 640;
+$container-mob: 600;
+$font-size-base: 10;
+$white: #f1f5f7;
+$black: #000000;
+$blue: #082c4c;
+$green: #00da71;
+$red: #ff0030;
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  transition: all 0.2s linear;
+  font-weight: 400;
+  background-color: $white;
+}
+
+body {
+  max-width: auto;
+  margin: 0 auto;
+}
+
+html {
+  @include fontSizeVw($font-size-base, $font-size-base, $font-size-base);
+
+  @media screen and (min-width: 1460) {
+    font-size: 10px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: calcVw($container-mob, $site-mob-design);
+
+  @include breakpoint(tabletAndDesktop) {
+    width: calcVw($container-tab, $site-tab-design);
+
+  }
+
+  @include breakpoint(desktopOnly) {
+    width: calcVw($container-desk, $site-desk-design);
+    max-width: 1208px;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {}
+}
+
+.text--white {
+  color: $white;
+}
+
+.text--regular {
+  font-weight: 400;
+}
+
+.text--bold {
+  font-weight: 700;
+}
+
+.text--bolder {
+  font-weight: 800;
+}
+
+.text--underline {
+  text-decoration: underline;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.block--center {
+  margin: 0 auto;
+}
+
+.cta__btn {
+  background: none;
+  text-transform: uppercase;
+  padding: 12px 42px 12px 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  position: relative;
+
+  &--green {
+    color: $green;
+    border: $green 2px solid;
+    fill: $green;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $green;
+      fill: $black;
+      color: $black;
+    }
+  }
+}

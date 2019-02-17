@@ -1,0 +1,63 @@
+////// Functions & Mixins //////
+// Calculate vw from pixels
+@function calcVw($target, $container) {
+  @return ($target / $container) * 100vw;
+}
+
+// Responsive font size
+@mixin fontSizeVw($fs-phone, $fs-tablet, $fs-desktop) {
+
+  font-size: #{$fs-desktop}px;
+
+  @include breakpoint(phoneOnly) {
+    font-size: calcVw($fs-phone, $site-mob-design);
+  }
+
+  @include breakpoint(tabletOnly) {
+    font-size: calcVw($fs-tablet, $site-tab-design);
+  }
+
+  @include breakpoint(desktopOnly) {
+    font-size: calcVw($fs-desktop, $site-desk-design);
+  }
+}
+
+// Breakpoint media queries
+@mixin breakpoint($break) {
+
+  @if $break==phoneOnly {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @else if $break==tabletOnly {
+    @media (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
+  }
+
+  @else if $break==phoneAndTablet {
+    @media (max-width: 1023px) {
+      @content;
+    }
+  }
+
+  @else if $break==tabletAndDesktop {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $break==desktopOnly {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @else if $break==desktopLarge {
+    @media (min-width: 1900px) {
+      @content;
+    }
+  }
+}

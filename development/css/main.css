@@ -1,0 +1,129 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+ol,
+ul {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both; }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-style: normal;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  font-weight: 400;
+  background-color: #f1f5f7; }
+
+body {
+  max-width: 1460px;
+  margin: 0 auto; }
+
+i {
+  font-style: normal; }
+
+html {
+  font-size: 10px; }
+  @media (max-width: 767px) {
+    html {
+      font-size: 1.5625vw; } }
+  @media (min-width: 768px) and (max-width: 1023px) {
+    html {
+      font-size: 1.30208vw; } }
+  @media (min-width: 1024px) {
+    html {
+      font-size: 0.61728vw; } }
+  @media screen and (min-width: 1460) {
+    html {
+      font-size: 10px; } }
+
+.container {
+  margin: 0 auto;
+  width: 93.75vw; }
+  @media (min-width: 768px) {
+    .container {
+      width: 84.24479vw; } }
+  @media (min-width: 1024px) {
+    .container {
+      width: 84.5679vw;
+      max-width: 1208px; } }
+
+a {
+  text-decoration: none; }
+
+.text--white {
+  color: #f1f5f7; }
+
+.text--regular {
+  font-weight: 400; }
+
+.text--bold {
+  font-weight: 700; }
+
+.text--bolder {
+  font-weight: 800; }
+
+.text--underline {
+  text-decoration: underline; }
+
+.text--center {
+  text-align: center; }
+
+.block--center {
+  margin: 0 auto; }
+
+.cta__btn {
+  background: none;
+  text-transform: uppercase;
+  padding: 12px 42px 12px 22px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  position: relative; }
+  .cta__btn--green {
+    color: #00da71;
+    border: #00da71 2px solid;
+    fill: #00da71; }
+    .cta__btn--green:hover, .cta__btn--green:active, .cta__btn--green:focus {
+      background-color: #00da71;
+      fill: #000000;
+      color: #000000; }
+
+.container--inner {
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .container--inner {
+      width: 66%; } }

@@ -1,0 +1,9 @@
+.container {
+  &--inner {
+    width: 100%;
+
+    @include breakpoint(desktopOnly) {
+      width: 66%;
+    }
+  }
+}
