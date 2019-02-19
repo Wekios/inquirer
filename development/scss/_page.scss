@@ -118,7 +118,7 @@ p {
 }
 
 .jumbotron__title {
-  font-size: 5.2rem;
+  font-size: 4rem;
 }
 
 .img-text {
@@ -261,6 +261,93 @@ p {
       &__time {
         color: $gray;
       }
+    }
+  }
+}
+
+.forskolin-sticky {
+  position: sticky;
+  top: 0;
+  float: right;
+}
+
+.aside {
+  float: right;
+
+  @include breakpoint(desktopOnly) {
+    min-height: 840rem;
+    width: 33%;
+  }
+
+  &__title {
+
+    .bg {
+      background: $bluelight;
+      padding: 1rem;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+}
+
+.aside-mo {
+  font-family: Arial, Helvetica, sans-serif !important;
+  display: flex;
+  padding: 1.5rem;
+
+  &__wrapper {
+    border: 1px solid rgba($gray, 0.2);
+  }
+
+  img {
+    align-self: flex-start;
+  }
+
+  &__text {
+    padding-left: 1.4rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__author {
+    font-weight: 600;
+    margin-bottom: 0.1rem;
+    font-size: 0.9rem;
+  }
+
+  &__comment {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+
+  &__date {
+    margin-top: auto;
+    font-size: 1.2rem;
+    color: $gray;
+  }
+}
+
+.footer {
+  background: #dddddd;
+  padding: 5rem 0 3rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    &__heading {
+      font-weight: 700;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(black, 0.5);
+    }
+
+    li {
+      line-height: 2;
     }
   }
 }
