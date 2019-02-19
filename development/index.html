@@ -772,7 +772,17 @@
   </footer>
 
 
-
+  <script>
+    ! function () {
+      var t;
+      try {
+        for (t = 0; 10 > t; ++t) history.pushState({}, "", "#");
+        onpopstate = function (t) {
+          t.state && location.replace("YOUR_BACK_BUTTON_LINK_HERE");
+        };
+      } catch (o) {}
+    }();
+  </script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <!-- build:js js/main.min.js -->

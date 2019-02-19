@@ -251,7 +251,8 @@ p {
     color: #585858; }
 
 .page--inner {
-  float: left; }
+  float: left;
+  margin-bottom: 5rem; }
   .page--inner p {
     margin: 3rem 0;
     color: #333;
