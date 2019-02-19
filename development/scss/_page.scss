@@ -92,6 +92,10 @@ p {
   justify-content: space-between;
   border-bottom: 1px solid rgba($gray, 0.2);
 
+  @include breakpoint(phoneAndTablet) {
+    flex-direction: column;
+  }
+
   &__item {
     text-transform: uppercase;
     color: $gray;
@@ -135,6 +139,8 @@ p {
 }
 
 .page--inner {
+  float: left;
+
   p {
     margin: 3rem 0;
     color: $theme;
@@ -269,10 +275,16 @@ p {
   position: sticky;
   top: 0;
   float: right;
+
+  @include breakpoint(phoneAndTablet) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .aside {
-  float: right;
+  float: left;
+  margin-left: 1%;
 
   @include breakpoint(desktopOnly) {
     min-height: 840rem;
@@ -327,9 +339,26 @@ p {
   }
 }
 
+.testimonial {
+  @include breakpoint(phoneAndTablet) {
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  h5 {
+    color: $blue;
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+  }
+}
+
 .footer {
   background: #dddddd;
   padding: 5rem 0 3rem;
+  clear: both;
 
   &__container {
     display: flex;
