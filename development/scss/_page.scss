@@ -8,12 +8,20 @@
   }
 }
 
+h3 {
+  font-size: 3.6rem;
+}
+
 h4 {
   font-size: 2.4rem;
 }
 
 h5 {
   font-size: 1.8rem;
+}
+
+h6 {
+  font-size: 1.4rem;
 }
 
 p {
@@ -185,5 +193,74 @@ p {
 .editors-note {
   h5 {
     margin: 2rem 0;
+  }
+}
+
+.img-text-cta {
+  &__right {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 3rem;
+    padding-left: 2rem;
+
+    h5 {
+      margin: 1rem 0;
+    }
+  }
+}
+
+.facebook {
+  font-family: Arial, Helvetica, sans-serif !important;
+  margin-bottom: 4rem;
+
+  &__heading {
+    font-weight: 600;
+    line-height: 30px;
+    font-size: 3rem;
+    text-transform: capitalize;
+  }
+
+  &__subheading {
+    font-size: 1.8rem;
+    line-height: 30px;
+    color: $facebook;
+    text-transform: capitalize;
+    font-weight: 600;
+  }
+
+  &__comment {
+    display: flex;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(black, 0.4);
+
+    img {
+      align-self: flex-start;
+    }
+
+    &__text {
+      padding-left: 1.4rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__author {
+      font-weight: 700;
+      color: $facebook;
+      margin-bottom: 0.5rem;
+    }
+
+    &__comment {
+      margin-bottom: 1rem;
+    }
+
+    &__interactions {
+      margin-top: auto;
+      font-size: 1.2rem;
+      color: #3b5998;
+
+      &__time {
+        color: $gray;
+      }
+    }
   }
 }

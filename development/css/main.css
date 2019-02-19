@@ -62,7 +62,7 @@ html {
       font-size: 1.30208vw; } }
   @media (min-width: 1024px) {
     html {
-      font-size: 0.52083vw; } }
+      font-size: 0.625vw; } }
   @media screen and (min-width: 1460) {
     html {
       font-size: 10px; } }
@@ -75,7 +75,7 @@ html {
       width: 91.14583vw; } }
   @media (min-width: 1024px) {
     .container {
-      width: 50.52083vw;
+      width: 60.625vw;
       max-width: 970px; } }
 
 a {
@@ -106,17 +106,40 @@ a {
 .text--blue {
   color: #059cea; }
 
+.cta__btn {
+  background: none;
+  text-transform: uppercase;
+  padding: 12px 42px 12px 22px;
+  font-weight: 700;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  position: relative;
+  border: none; }
+  .cta__btn--green {
+    color: #ffffff;
+    background-color: #1ca161; }
+    .cta__btn--green:hover, .cta__btn--green:active, .cta__btn--green:focus {
+      background-color: #1bda7e;
+      color: #000000; }
+
 .container--inner {
   width: 100%; }
   @media (min-width: 1024px) {
     .container--inner {
       width: 66%; } }
 
+h3 {
+  font-size: 3.6rem; }
+
 h4 {
   font-size: 2.4rem; }
 
 h5 {
   font-size: 1.8rem; }
+
+h6 {
+  font-size: 1.4rem; }
 
 p {
   font-size: 1.6rem; }
@@ -261,3 +284,56 @@ p {
 
 .editors-note h5 {
   margin: 2rem 0; }
+
+.img-text-cta__right {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 3rem;
+  padding-left: 2rem; }
+  .img-text-cta__right h5 {
+    margin: 1rem 0; }
+
+.facebook {
+  font-family: Arial, Helvetica, sans-serif !important;
+  margin-bottom: 4rem; }
+  .facebook__heading {
+    font-weight: 600;
+    line-height: 30px;
+    font-size: 3rem;
+    text-transform: capitalize; }
+  .facebook__subheading {
+    font-size: 1.8rem;
+    line-height: 30px;
+    color: #3b5998;
+    text-transform: capitalize;
+    font-weight: 600; }
+  .facebook__comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4); }
+    .facebook__comment img {
+      -ms-flex-item-align: start;
+      align-self: flex-start; }
+    .facebook__comment__text {
+      padding-left: 1.4rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .facebook__comment__author {
+      font-weight: 700;
+      color: #3b5998;
+      margin-bottom: 0.5rem; }
+    .facebook__comment__comment {
+      margin-bottom: 1rem; }
+    .facebook__comment__interactions {
+      margin-top: auto;
+      font-size: 1.2rem;
+      color: #3b5998; }
+      .facebook__comment__interactions__time {
+        color: #585858; }

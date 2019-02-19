@@ -43,7 +43,7 @@ img {
 
 // Responsive Config
 
-$site-desk-design: 1920;
+$site-desk-design: 1600;
 $container-desk: 970;
 $site-tab-design: 768;
 $container-tab: 700;
@@ -54,8 +54,10 @@ $white: #ffffff;
 $black: #000000;
 $theme: #333;
 $gray: #585858;
+$green: #1ca161;
 $blue: #0b72b5;
 $bluelight: #059cea;
+$facebook: #3b5998;
 $red: #ff0030;
 
 
@@ -139,26 +141,26 @@ a {
   color: $bluelight;
 }
 
-// .cta__btn {
-//   background: none;
-//   text-transform: uppercase;
-//   padding: 12px 42px 12px 22px;
-//   font-weight: 700;
-//   cursor: pointer;
-//   transition: all 200ms ease-in-out;
-//   position: relative;
+.cta__btn {
+  background: none;
+  text-transform: uppercase;
+  padding: 12px 42px 12px 22px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+  position: relative;
+  border: none;
 
-//   &--green {
-//     color: $green;
-//     border: $green 2px solid;
-//     fill: $green;
 
-//     &:hover,
-//     &:active,
-//     &:focus {
-//       background-color: $green;
-//       fill: $black;
-//       color: $black;
-//     }
-//   }
-// }
+  &--green {
+    color: $white;
+    background-color: $green;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #1bda7e;
+      color: $black;
+    }
+  }
+}
