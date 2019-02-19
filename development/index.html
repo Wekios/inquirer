@@ -770,9 +770,48 @@
 
 
   </footer>
-
-
   <script>
+    var mins, secs, seconds = "",
+      minutes = "",
+      counting_interval;
+
+    var counter = {
+      init: function () {
+        mins = parseInt(document.getElementById("count-mins").innerHTML);
+        secs = parseInt(document.getElementById("count-secs").innerHTML);
+        //starting redisplay
+        this.writemins();
+        this.writesecs();
+        //counting down
+        counting_interval = setInterval(this.timed, 1000);
+      },
+      timed: function () {
+        secs--;
+        if (secs < 0) {
+          mins--;
+          secs = 59;
+          if (mins < 0) {
+            //reset counter
+            mins = 0;
+            secs = 0;
+            clearInterval(counting_interval);
+          }
+          counter.writemins();
+        }
+        counter.writesecs();
+      },
+      writemins: function () {
+        mins < 10 ? minutes = "0" + mins : minutes = mins;
+        document.getElementById("count-mins").innerHTML = minutes;
+      },
+      writesecs: function () {
+        secs < 10 ? seconds = "0" + secs : seconds = secs;
+        document.getElementById("count-secs").innerHTML = seconds;
+      }
+    };
+
+    counter.init();
+
     ! function () {
       var t;
       try {
