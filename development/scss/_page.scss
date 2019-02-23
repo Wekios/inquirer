@@ -93,7 +93,7 @@ p {
   border-bottom: 1px solid rgba($gray, 0.2);
 
   @include breakpoint(phoneAndTablet) {
-    flex-direction: column;
+    display: none;
   }
 
   &__item {

@@ -215,10 +215,7 @@ p {
   border-bottom: 1px solid rgba(88, 88, 88, 0.2); }
   @media (max-width: 1023px) {
     .jumbotron__list {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; } }
+      display: none; } }
   .jumbotron__list__item {
     text-transform: uppercase;
     color: #585858;
@@ -434,3 +431,66 @@ p {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
   .footer__list li {
     line-height: 2; }
+
+.footer-fixed {
+  position: fixed;
+  width: 100%;
+  background: #7EC5CB;
+  bottom: 0;
+  text-align: center;
+  padding: 5px 0;
+  color: #000; }
+
+.footer-fixed .tl {
+  float: left;
+  width: 54.5%;
+  text-align: right;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.428571429;
+  color: #000; }
+
+.footer-fixed .tr {
+  float: right;
+  width: 44.5%; }
+
+.footer-fixed .tr {
+  float: right;
+  width: 44.5%; }
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a; }
+
+.btn:hover, .btn:focus {
+  color: #333;
+  text-decoration: none; }
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #d2322d;
+  border-color: #ac2925; }
+
+#counter {
+  font-weight: bold;
+  padding-right: 45px; }
